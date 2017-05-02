@@ -1,3 +1,40 @@
 {% block content %}
-<p>Whoa, check me out, I am included!</p>
+<p>Search bar included from html snippet!</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Bar</title>
+<style type="text/css">
+    #search {
+        text-align: center;
+        width: 400px;
+        padding: 7px;
+        border: 1px  solid #333;
+    }
+    #submit {
+        position: center;
+        padding: 7px;
+        background: #607d8b;
+        border: 1px solid #607d8b;
+        color: white;
+        margin-left: -5px;
+        cursor: pointer;
+    }
+    #submit:hover {
+        background: #333;
+        transition: all 0 .40s;
+
+    }
+</style>
+</head>
+<body>
+<form action = "www.google.com">
+    <input type="text " placeholder="Search..." maxlength="20" id=" search">
+    <input type="submit" value="Go!" id="submit">
+
+</form>
+</body>
+</html>
 {% endblock %}
