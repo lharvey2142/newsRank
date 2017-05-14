@@ -1,13 +1,12 @@
 from nytimesarticle import articleAPI
-api = articleAPI('')
+api = articleAPI('77cb4690bfcc410aa646217a1502e601')
 
 '''
 The q (for query) parameter searches the article's body, headline and byline for a particular term. In this case, we are looking for the search term ‘Obama’. The fq (for filter query) parameter filters search results by various dimensions. For instance, ‘headline’:’Obama’ will filter search results to those with ‘Obama’ in the headline. 'source':['Reuters','The New York Times'] will filter by source (Reuters, New York Times, and AP are available through the API.) The begin_date parameter (in YYYYMMDD format) limits the date range of the search.
 '''
-articles = api.search( q = 'Obama', 
-     fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times'],begin_date = 20111231 )
+#articles = api.search( q = 'Obama', fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times'], begin_date =20111231)
 
-
+articles = api.search( q = 'Obama', fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times']})
 def parse_articles(articles):
     '''
     This function takes in a response to the NYT api and parss
@@ -63,3 +62,4 @@ def get_articles(date,query):
         all_articles = all_articles + articles
     return(all_articles)
 
+#articles = api.search(q = 'Obama',fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times']},begin_date = 20111231 )
