@@ -1,0 +1,6 @@
+{% extends "personal/header.html" %}
+{% block content %}
+{% for article in object_list %}
+<h5>{{ article.date|date:"Y-m-d" }}<a href="/newsApp/{{article.id}}"> {{article.title}} </a></h5>
+{% endfor %}
+{% endblock %}

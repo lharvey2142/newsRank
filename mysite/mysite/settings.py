@@ -31,8 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #'dynamic_scraper', #allows me to use http://django-dynamic-scraper.readthedocs.io/en/latest/installation.html
     'personal',
     'blog',
+    'newsApp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,0 +1,10 @@
+
+{% extends "personal/header.html" %}
+{% block content %}
+<h3><a href="/newsApp/{{article.id}}">{{article.title }}</a></h3>
+<h6> was searched on {{ article.date }} with a polarity of {{article.polarity}} and a result of {{article.result}}</h6>
+<div class = "container">
+ {{ article.body|safe|linebreaks}}
+</div>
+<br><br>
+{% endblock %}

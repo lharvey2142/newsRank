@@ -6,7 +6,8 @@ The q (for query) parameter searches the article's body, headline and byline for
 '''
 #articles = api.search( q = 'Obama', fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times'], begin_date =20111231)
 
-articles = api.search( q = 'Obama', fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times']})
+
+
 def parse_articles(articles):
     '''
     This function takes in a response to the NYT api and parss
@@ -54,12 +55,28 @@ def get_articles(date,query):
     for i in range(0,100): #NYT limits pager to first 100 pages. But rarely will you find over 100 pages of results anyway.
         articles = api.search(q = query,
                fq = {'source':['Reuters','AP', 'The New York Times']},
-               begin_date = date + '0101',
-               end_date = date + '1231',
-               sort='oldest',
-               page = str(i))
+               #begin_date = date + '0101',
+               #end_date = date + '1231',
+               #sort='oldest',
+               #page = str(i))
+                              )
+        print(articles)
         articles = parse_articles(articles)
+        print(articles)
         all_articles = all_articles + articles
     return(all_articles)
 
-#articles = api.search(q = 'Obama',fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times']},begin_date = 20111231 )
+#articles = api.search(q = 'Obama',fq = {'headline':'Obama', 'source':['Reuters','AP', 'The New York Times']},begin_date = 2011123)
+#articles = api.search( q ="Obama", fq = {"headline":"Obama", "source":["Reuters","AP", "The New York Times"] } )
+
+#for a in articles:
+#   print(a)
+
+ar =get_articles('2016','Trump')
+for a in ar:
+    print(a)
+
+#for n in parse_articles(articles):
+ #   print(n)
+
+
