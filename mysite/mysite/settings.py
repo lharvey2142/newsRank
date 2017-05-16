@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-
+#import django
+#django.setup()
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -31,7 +32,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #'dynamic_scraper', #allows me to use http://django-dynamic-scraper.readthedocs.io/en/latest/installation.html
     'personal',
     'blog',
     'newsApp',
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
