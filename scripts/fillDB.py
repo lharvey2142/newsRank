@@ -30,12 +30,11 @@ le.com', 'http://www.Nephef.com', 'http://www.NewPoliticsToday.com', 'http://www
 .com', 'http://www.NewsBySquad.com', 'http://www.NewsDaily12.com', 'http://www.NewsExaminer.net', 'http://www.NewsLeak.co',\
  'http://www.Newslo.com', 'http://www.NewzMagazine.com', 'http://www.NotAllowedTo.com', 'http://www.OccupyDemocrats.com', '\
 http://www.OnePoliticalPlaza.com', 'http://www.OpenMagazines.com', 'http://www.Politicalo.com', 
+'http://www.Politicono.com', 'http://www.Politicops.com', 'http://www.Politicot.com', 'http://www.PoliticsUSANews.com', 'http://www.President45DonaldTrump.com', 
+'http://www.Prntly.com', 'http://www.RedCountry.us', 'http://www.RedRockTribune.com', 'http://www.Religionlo.com', 'http://www.ReligionMind.com', 'http://www.Rogue-Nation3.com', 'http://www.RumorJournal.com', 'http://www.SatiraTribune.com', 'http://www.Smag31.com', 
 
 '''
-knownFakeSites =['http://www.Politicono.com', 'http://www.Politicops.com', 'http://www.Politicot.com', 'http://www.PoliticsUSANews.com', 'http://www.President45DonaldT\
-rump.com', 'http://www.Prntly.com', 'http://www.RedCountry.us', 'http://www.RedRockTribune.com', 'http://www.Religionlo.com\
-', 'http://www.ReligionMind.com', 'http://www.Rogue-Nation3.com', 'http://www.RumorJournal.com', 'http://www.SatiraTribune.\
-com', 'http://www.Smag31.com', 'http://www.SocialEverythings.com', 'http://www.Success-Street.com', 'http://www.SupremePatr\
+knownFakeSites =['http://www.SocialEverythings.com', 'http://www.Success-Street.com', 'http://www.SupremePatr\
 iot.com', 'http://www.TDTAlliance.com', 'http://www.TeaParty.org', 'http://www.ThatViralFeed.net', 'http://www.The-Insider.\
 co', 'http://www.TheBigRiddle.com', 'http://www.TheInternetPost.net', 'http://www.TheLastLineOfDefense.org', 'http://www.Th\
 eMoralOfTheStory.us', 'http://www.TheNationalMarijuanaNews.com', 'http://www.TheNet24h.com', 'http://www.TheNewYorkEvening.\
@@ -48,8 +47,7 @@ ews.com', 'http://www.USAFirstInformation.com', 'http://www.USANewsToday.com', '
 ww.USAPoliticsToday.com', 'http://www.USAPoliticsZone.com', 'http://www.USASnich.com', 'http://www.USATodayNews.me', 'http:\
 //www.USHealthyAdvisor.com', 'http://www.USHealthyLife.com', 'http://www.USHerald.com', 'http://www.USInfoNews.com', 'http:\
 //www.USPOLN.com', 'http://www.USPostman.com', 'http://www.ViralActions.com', 'http://www.VoxTribune.com', 'http://www.Wash\
-ingtonFeed.com', 'http://www.WashingtonPost.com.co', 'http://www.WorldNewsDailyReport.com', 'http://www.WorldPoliticsNow.co\
-m']
+ingtonFeed.com', 'http://www.WashingtonPost.com.co', 'http://www.WorldNewsDailyReport.com', 'http://www.WorldPoliticsNow.com']
 
 
 import sys#sys.path.append('../mysite')
@@ -75,7 +73,7 @@ if __name__ == "__main__":
         fake_paper = None
         try:
             fake_paper = newspaper.build(url)
-            #print(url + ' contains ' + str(len(fake_paper.articles)) + ' fake articles')
+            print(url + ' contains ' + str(len(fake_paper.articles)) + ' fake articles')
         except: 
             print(url)
             print('url is bad')
@@ -85,16 +83,15 @@ if __name__ == "__main__":
             try:
                 article.download()
                 article.parse()
-            #print('author:**************************\n');
-            #print(article.authors)
-                print('text:**************************\n');print(article.text)
-                print('title:**************************\n');print(article.title)
-                #            article.nlp()
-                #            print('keywords:**************************\n');print(article.keywords)
-                #            print('summary:**************************\n');print(article.summary)
+                #print('author:**************************\n');print(article.authors)
+                #print('text:**************************\n');print(article.text)
+                #a print('title:**************************\n');print(article.title)
+                #article.nlp()
+                #print('keywords:**************************\n');print(article.keywords)
+                #print('summary:**************************\n');print(article.summary)
             except:
                 print('issue with download/parse')
-                print(article)
+#                print(article)
                 continue
             x,y,z = tweetParser.getSentiment(url,2000)
             print(article.publish_date)
