@@ -26,7 +26,7 @@ SECRET_KEY = '-(6-g_hkye&0iqq@$lnvabb0va%yi)qoijj42as_w-px%1$$bo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['newsrank-115.herokuapp.com']
 
 
 # Application definition
