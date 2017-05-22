@@ -10,9 +10,7 @@
   <script type="text/javascript" src="{% static 'personal/js/libs/modernizr-2.0.6.min.js'%}"> </script>
   <title>NEWSRANK</title>
 <!--  <link rel="stylesheet" href="personal/css/style.css"> -->
- 
-
-  <!--<script src="personal/js/libs/modernizr-2.0.6.min.js"></script>-->
+<!--<script src="personal/js/libs/modernizr-2.0.6.min.js"></script>-->
 </head>
 <body>
 
@@ -51,8 +49,8 @@
       </article>
       
       <aside>
-        <h3>side note</h3>
-        <p>p</p>
+      {% block content %}
+      {% endblock %} 
       </aside>
       
     </div> <!-- #main -->
@@ -123,8 +121,7 @@
     <div class="col-sm-10">
    <div class='container-fluid'>
    <br><br>
-      {% block content %}
-      {% endblock %} 
+
    </div>
     </div>
   </div> 
