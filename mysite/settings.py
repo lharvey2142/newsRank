@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-(6-g_hkye&0iqq@$lnvabb0va%yi)qoijj42as_w-px%1$$bo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False#True
+DEBUG = True
 
 ALLOWED_HOSTS = ['newsrank-115.herokuapp.com','localhost', '127.0.0.1']
 
