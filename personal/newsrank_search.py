@@ -1,4 +1,4 @@
-#link this file to the search bar file I created before. 
+#link this file to the search bar file and views_search.py I created before. 
 # Pass the query into getGoogleLinks()function with the number 0.
 # example:  query = Trump, getGoogleLinks("Trump", "0")
 
