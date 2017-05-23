@@ -86,7 +86,7 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
 #header-container,
 #footer-container,
 #main aside{
-	background:#f16529;
+	background:rgba(80, 121, 216, 0.91);
 }
 
 #title{ color:white; }
