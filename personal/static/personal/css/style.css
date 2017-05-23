@@ -86,13 +86,13 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
 #header-container,
 #footer-container,
 #main aside{
-	background:rgba(80, 121, 216, 0.91);
+	background:#f16529;
 }
 
 #title{ color:white; }
 
-::-moz-selection { background: rgba(80, 121, 216, 0.91); color: #fff; text-shadow: none; }
-::selection      { background: rgba(80, 121, 216, 0.91); color: #fff; text-shadow: none; }
+::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
+::selection      { background: #f16529; color: #fff; text-shadow: none; }
 
 /* ==============
     MOBILE: Menu
