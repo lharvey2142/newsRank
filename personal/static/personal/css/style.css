@@ -79,9 +79,9 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
     ALL: Orange Theme
    =================== */
 
-#header-container{ border-bottom: 20px solid #e44d26; }
-#footer-container{ border-top:    20px solid #e44d26; }
-#main aside      { border-top:    20px solid #e44d26; }
+#header-container{ border-bottom: 20px solid #48c0db; }
+#footer-container{ border-top:    20px solid #48c0db; }
+#main aside      { border-top:    20px solid #48c0db; }
 
 #header-container,
 #footer-container,
@@ -91,8 +91,8 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
 
 #title{ color:white; }
 
-::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
-::selection      { background: #f16529; color: #fff; text-shadow: none; }
+::-moz-selection { background: rgba(80, 121, 216, 0.91); color: #fff; text-shadow: none; }
+::selection      { background: rgba(80, 121, 216, 0.91); color: #fff; text-shadow: none; }
 
 /* ==============
     MOBILE: Menu
