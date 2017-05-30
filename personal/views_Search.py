@@ -10,7 +10,7 @@
 # this website will give you the query format
 
 
-from django.db.models import Q
+from django.db.models import Article
 
 query = request.GET.get("q")
 if query:

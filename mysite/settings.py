@@ -9,13 +9,12 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-#import django
-#django.setup()
-import os
 
+import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+import django
+django.setup()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -26,7 +25,7 @@ SECRET_KEY = '-(6-g_hkye&0iqq@$lnvabb0va%yi)qoijj42as_w-px%1$$bo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['newsrank-115.herokuapp.com','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['newsrank-115.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition

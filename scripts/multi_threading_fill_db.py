@@ -1,14 +1,12 @@
-#http://www.InterestingDailyNews.com contains 24 fake articles
-
-'''
-The BeavertonBorowitz ReportCall the Cops
-Cap NewsChristwire.orgClickHole.com
-DuffleBlog.comHuzlersNaha Daily
-Newslo News Mutiny.comRealNewsRightNow.com
-ReductressSprotspickle.comThe Onion
-This is ThatWorld News Daily Report 
-
-['http://www.16WMPO.com', 'http://www.24wpn.com', 'http://www.ABCNews.com.co', 'http://www.actualidadpanam\
+knownrealSites = [    
+    'http://www.foxnews.com',
+    'https://www.nytimes.com',
+    'https://apnews.com',
+    'https://ap.org/en-us',
+    'http://cnn.com', 
+    'https://usnews.com'
+    ]
+knownFakeSites =['http://www.16WMPO.com', 'http://www.24wpn.com', 'http://www.ABCNews.com.co', 'http://www.actualidadpanam\
 ericana.com', 'http://www.AmericanPoliticNews.co', 'http://www.AmericanPresident.co', 'http://www.AMPosts.com', 'http://www\
 .ANews24.org/', 'http://www.AngryPatriotMovement.com', 'http://www.Anonjekloy.tk', 'http://www.AssociatedMediaCoverage.com'\
 , 'http://www.Aurora-News.us', 'http://www.BB4SP.com', 'http://www.BeforeItsNews.com', 'http://www.BlackInsuranceNews.com',\
@@ -22,20 +20,17 @@ www.Disclose.tv', 'http://www.DIYHours.net', 'http://www.DonaldTrumpPOTUS45.com'
 w.EmpireNews.net', 'http://www.EmpireSports.co', 'http://www.En-Volve.com', 'http://www.ENHLive.com', 'http://www.FedsAlert\
 .com', 'http://www.FlashNewsCorner.com', 'http://www.FreedomDaily.com', 'http://www.FreeWoodPost.com', 'http://www.FreshDai\
 lyReport.com', 'http://www.GiveMeLiberty01.com', 'http://www.GlobalPoliticsNow.com', 'http://www.GummyPost.com', 'http://ww\
-w.HealthyCareAndBeauty.com', 'http://www.HealthyWorldHouse.com', 'http://www.InterestingDailyNews.com', 
+w.HealthyCareAndBeauty.com', 'http://www.HealthyWorldHouse.com', 'http://www.InterestingDailyNews.com',\
 , 'http://www.LastDeplorables.com', 'http://www.LearnProgress.org', 'http://www.LiberalPlug.com', 'http://www.LibertyAllian\
-ce.com', 'http://www.Local31News.com', 'http://www.MadWorldNews.com', 'http://www.MajorThoughts.com','http://www.Mentor2day.com',
+ce.com', 'http://www.Local31News.com', 'http://www.MadWorldNews.com', 'http://www.MajorThoughts.com','http://www.Mentor2day.com',\
 'http://www.MetropolitanWorlds.com', 'http://www.NationalReport.net', 'http://www.NBC.com.co', 'http://www.NeonNett\
 le.com', 'http://www.Nephef.com', 'http://www.NewPoliticsToday.com', 'http://www.News4KTLA.com', 'http://www.NewsBreaksHere\
 .com', 'http://www.NewsBySquad.com', 'http://www.NewsDaily12.com', 'http://www.NewsExaminer.net', 'http://www.NewsLeak.co',\
  'http://www.Newslo.com', 'http://www.NewzMagazine.com', 'http://www.NotAllowedTo.com', 'http://www.OccupyDemocrats.com', '\
-http://www.OnePoliticalPlaza.com', 'http://www.OpenMagazines.com', 'http://www.Politicalo.com', 
-'http://www.Politicono.com', 'http://www.Politicops.com', 'http://www.Politicot.com', 'http://www.PoliticsUSANews.com', 'http://www.President45DonaldTrump.com', 
-'http://www.Prntly.com', 'http://www.RedCountry.us', 'http://www.RedRockTribune.com', 'http://www.Religionlo.com', 'http://www.ReligionMind.com', 'http://www.Rogue-Nation3.com', 'http://www.RumorJournal.com', 'http://www.SatiraTribune.com', 'http://www.Smag31.com', 
-
-'''
-'''
-knownFakeSites =['http://www.SocialEverythings.com', 'http://www.Success-Street.com', 'http://www.SupremePatr\
+http://www.OnePoliticalPlaza.com', 'http://www.OpenMagazines.com', 'http://www.Politicalo.com',\
+'http://www.Politicono.com', 'http://www.Politicops.com', 'http://www.Politicot.com', 'http://www.PoliticsUSANews.com', 'http://www.President45DonaldTrump.com',\
+'http://www.Prntly.com', 'http://www.RedCountry.us', 'http://www.RedRockTribune.com', 'http://www.Religionlo.com', 'http://www.ReligionMind.com', 'http://www.Rogue-Nation3.com', 'http://www.RumorJournal.com', 'http://www.SatiraTribune.com', 'http://www.Smag31.com',\
+'http://www.SocialEverythings.com', 'http://www.Success-Street.com', 'http://www.SupremePatr\
 iot.com', 'http://www.TDTAlliance.com', 'http://www.TeaParty.org', 'http://www.ThatViralFeed.net', 'http://www.The-Insider.\
 co', 'http://www.TheBigRiddle.com', 'http://www.TheInternetPost.net', 'http://www.TheLastLineOfDefense.org', 'http://www.Th\
 eMoralOfTheStory.us', 'http://www.TheNationalMarijuanaNews.com', 'http://www.TheNet24h.com', 'http://www.TheNewYorkEvening.\
@@ -49,74 +44,74 @@ ww.USAPoliticsToday.com', 'http://www.USAPoliticsZone.com', 'http://www.USASnich
 //www.USHealthyAdvisor.com', 'http://www.USHealthyLife.com', 'http://www.USHerald.com', 'http://www.USInfoNews.com', 'http:\
 //www.USPOLN.com', 'http://www.USPostman.com', 'http://www.ViralActions.com', 'http://www.VoxTribune.com', 'http://www.Wash\
 ingtonFeed.com', 'http://www.WashingtonPost.com.co', 'http://www.WorldNewsDailyReport.com', 'http://www.WorldPoliticsNow.com']
-'''
 
-knownFakeSites = [
-    'https://www.publicintegrity.org/',
-    'https://www.nytimes.com/',
-    'https://www.theguardian.com/'
-    ]
-
-import os
 import sys
-import django
-#sys.path.append('../mysite')
-sys.path.append('/Users/froyvalencia/Desktop/newsRank/mysite')
+sys.path.append('/Users/froyvalencia/Desktop/newsRank')
+import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','mysite.settings')
-
-#os.environ['DJANGO_SETTINGS_MODULE']='mysite.settings'
-#django.setup()
+import django
+django.setup()
 
 from django.contrib.auth.models import User
 users = User.objects.all()
+
 import newspaper
+from newspaper import news_pool
 import nltk
 import tweetParser
+from newsApp.models import Article
 
-if __name__ == "__main__":
-    from newsApp.models import Article
+def loadNews(knownrealSites):    
     articles = Article.objects.all()
     #for a in articles:
     #print(a)
-    for url in knownFakeSites:
-        fake_paper = None
+    papers = []
+    for url in knownrealSites:
+        real_paper = None
         try:
-            fake_paper = newspaper.build(url)
-            print(url + ' contains ' + str(len(fake_paper.articles)) + ' fake articles')
+            real_paper = newspaper.build(url)
+            papers.append(real_paper)
+            print(url + ' contains ' + str(len(real_paper.articles)) + ' real articles')
         except: 
             print(url)
             print('url is bad')
             continue
-        
-        for article in fake_paper.articles:
+    news_pool.set(papers, threads_per_source=3)
+    news_pool.join()
+    for paper in papers:
+        for article in paper.articles:
+            #due to multithreading above we can assume every article has had download called on it.
+            #for article in real_paper.articles:
             try:
-                article.download()
+                #article.download()
                 article.parse()
-                print('author:**************************\n');print(article.authors)
-                print('text:**************************\n');print(article.text)
-                print('title:**************************\n');print(article.title)
+                #print('article.authors:**************************\n');print(article.authors)
+                #print('article.text:**************************\n');print(article.text)
+                #print('article.url:**************************\n');print(article.url)
+                #print('article.title:**************************\n');print(article.title)
                 #article.nlp()
                 #print('keywords:**************************\n');print(article.keywords)
                 #print('summary:**************************\n');print(article.summary)
             except:
                 print('issue with download/parse')
-                print(article)
                 continue
-            x,y,z = tweetParser.getSentiment(url,2000)
-            print(article.publish_date)
-            article = Article(
-                address = url,
+            #x,y,z = tweetParser.getSentiment(url,2000)
+            #print(article.publish_date)
+            a = Article(
+                address = article.url,
                 title = article.title,
                 body = article.text,
                 date = article.publish_date,
-                result = 'reliable', #'unreliable',
-                positive = x,
-                negative = y,
-                neutral = z,
+                result = 'reliable',
+                #positive = x,
+                #negative = y,
+                #neutral = z,
                 )
             try:
-                article.save()
+                a.save()
                 print('**************************article SAVED**************************')
             except:
-                print('article failed to save with field')
+                print('**************** article failed to save with field **************')
                 continue
+if __name__ == "__main__":
+    loadNews(knownrealSites)

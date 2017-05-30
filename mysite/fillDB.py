@@ -57,18 +57,16 @@ knownFakeSites = [
     'https://www.theguardian.com/'
     ]
 
-import os
-import sys
-import django
-#sys.path.append('../mysite')
+import sys#sys.path.append('../mysite')
 sys.path.append('/Users/froyvalencia/Desktop/newsRank/mysite')
+import os
+import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','mysite.settings')
-
 #os.environ['DJANGO_SETTINGS_MODULE']='mysite.settings'
-#django.setup()
+django.setup()
 
-from django.contrib.auth.models import User
-users = User.objects.all()
+#from django.contrib.auth.models import User
+#users = User.objects.all()
 import newspaper
 import nltk
 import tweetParser
