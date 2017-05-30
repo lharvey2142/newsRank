@@ -6,6 +6,14 @@
 <head>
   <meta charset="utf-8"/meta>
    {% load staticfiles %}
+   <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--</head> -->
    <link rel="stylesheet" href="{% static 'personal/css/style.css'%}" type = "text/css"/link>
    	<script type="text/javascript" src="{% static 'personal/js/libs/modernizr-2.0.6.min.js'%}"> </script>
    		<title>NewsRank</title>
@@ -23,38 +31,14 @@
           <li><a href='/contact/'>Contact</a></li>
         </ul>
     </nav>
+
     </header>
   </div>
   <div id="main-container">
     <div id="main" class="wrapper clearfix">
       
-      <article>
-        <header>
-          <h2>News</h2>
-          <p>Using an artificial intelligence algorithm this service offers insight on reliable news. Fake news is displayed on the right.</p>
-        </header>
-        <section>
-          <h2>Problem Description</h2>
-          <p>The problem developed with companies publishing fake new stories in order to make profit.</p>
-          <a href="http://www.factcheck.org/2016/11/how-to-spot-fake-news/">news</a>
-        </section>
-        <section>
-          <h2>Sources</h2>
-          <p>A Guide to Spotting Fake News</p>
-        </section>
-        <footer>
-          <h2>Additional</h2>
-          <p>Test it out</p> 
-	      <a href="https://newsroom.fb.com/news/">facebook news</a>
-          <a href="https://twitter.com/breakingnews?lang=en">twitter news</a>
-          <a href="http://www.independent.co.uk/topic/snapchat ">snapcaht news</a>
-        </footer>
-      </article>
-      
-      <aside>
       {% block content %}
       {% endblock %} 
-      </aside>
       
     </div> <!-- #main -->
 
@@ -80,9 +64,9 @@
          <h2>Sources</h2>
           <p>A Guide to Spotting Fake News</p>
           <p>Test it out</p> 
-          <a href="https://newsroom.fb.com/news/">facebook news</a>
-          <a href="https://twitter.com/breakingnews?lang=en">twitter news</a>
-          <a href="http://www.independent.co.uk/topic/snapchat ">snapcaht news</a>
+          <p><a href="https://newsroom.fb.com/news/">facebook news</a></p>
+          <p><a href="https://twitter.com/breakingnews?lang=en">twitter news</a></p>
+          <p><a href="http://www.independent.co.uk/topic/snapchat ">snapcaht news</a></p>
       </div>
 
     </div>
@@ -91,16 +75,11 @@
 
 
 
-
-
   <div id="footer-container">
     <footer class="wrapper">
-
       <h3>Your Source for News Reliability Rankings</h3>
     </footer>
   </div>
-
-
 
 
 </body>
