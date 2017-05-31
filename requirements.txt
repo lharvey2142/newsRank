@@ -25,7 +25,7 @@ jsonpath-rw==1.4.0
 kombu==4.0.2
 lxml==3.7.3
 newspaper3k==0.1.9
-nltk==3.2.2
+
 numpy==1.11.3
 nytimesarticle==0.1.0
 oauthlib==2.0.2
@@ -51,6 +51,7 @@ redis==2.10.5
 requests==2.13.0
 requests-file==1.4.2
 requests-oauthlib==0.8.0
+nltk==3.2.2
 Scrapy==1.3.3
 service-identity==16.0.0
 six==1.10.0
