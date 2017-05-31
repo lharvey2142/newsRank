@@ -15,13 +15,14 @@ users = User.objects.all()
 from newsApp.models import Article
 
 def extract(request):
-    print(request.GET.get('url_to_clean'))
+    u = request.GET.get('url_to_clean')
+    print(u)
     import newspaper
 	#from newspaper import Article
-    a = newspaper.Article(request.GET.get('url_to_clean'))
+    a = newspaper.Article(u)
     a.download()
     a.parse()
     a.nlp()
     article = Article(address = a.url,title = a.title,body = a.text,date = a.publish_date)
     article.save()
-    return render(request, 'newsApp/extract.html', {'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
+    return render(request, 'newsApp/extract.html', {'result':a.result,'url':u,title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
