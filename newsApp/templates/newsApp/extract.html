@@ -1,5 +1,10 @@
 {% extends "personal/header.html" %}
 {% block content %}
+
+    <body>
+  <div id="main-container">
+    <div id="main" class="wrapper clearfix">    
+
   <div class="container article-page">
     <div class="table-responsive">
       <h3>Extracted Data</h3>
@@ -10,6 +15,7 @@
             <td>Title</td>
             <td>{{ title }}</td>
           </tr>
+          
           <tr>
             <td> Authors</td>
             <td>{{ authors }}</td>
@@ -63,4 +69,14 @@
       </table>
     </div>
   </div>
+
+
+
+
+
+      </div> <!-- #main -->
+
+  </div> <!-- #main-container -->
+  </body>
+
 {% endblock %}

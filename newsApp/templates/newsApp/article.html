@@ -1,16 +1,24 @@
 
 {% extends "personal/header.html" %}
 {% block content %}
+<body>
+<div id="main-container">
+<div id="main" class="wrapper clearfix">    
 
-<h3><a href="/newsApp/{{article.id}}">{{article.title }}</a></h3>
-<h6> was searched on {{ article.date }} and a result of </h6> 
-<h2>{{article.result}} </h2>
-<!-- <h6> Sentiment from twitter: positive: {{ article.positive}} negative: {{ article.negative}} neutral: {{article.neutral}} </h6> -->
+	<h3><a href="/newsApp/{{article.id}}">{{article.title }}</a></h3>
+	<h6> was searched on {{ article.date }} and a result of </h6> 
+	<h2>{{article.result}} </h2>
+	<!-- <h6> Sentiment from twitter: positive: {{ article.positive}} negative: {{ article.negative}} neutral: {{article.neutral}} </h6> -->
 
-<h4>{{article.address}} </h4>
-<div class = "container">
- {{ article.body|safe|linebreaks}}
+	<h4>{{article.address}} </h4>
+	<div class = "container">
+	 {{ article.body|safe|linebreaks}}
 
-</div>
-<br><br>
+	</div>
+	<br><br>
+
+</div> <!-- #main -->
+</div> <!-- #main-container -->
+</body>
+
 {% endblock %}

@@ -1,6 +1,18 @@
 {% extends "personal/header.html" %}
+
+
+
 {% block content %}
+    <body>
+  <div id="main-container">
+    <div id="main" class="wrapper clearfix">  
+
  {% for c in content%}
     <p>{{c}}</p>
  {% endfor %}
+       </div> <!-- #main -->
+
+  </div> <!-- #main-container -->
+  </body>
 {% endblock %}
+

@@ -25,7 +25,7 @@
 <!--<link rel="stylesheet" href="personal/css/style.css"> -->
 <!--<script src="personal/js/libs/modernizr-2.0.6.min.js"></script>-->
 </head>
-	<body>
+	
 		<div id="header-container">
 			<header class="wrapper clearfix">
 				<h1 id="title">NewsRank</h1>
@@ -39,32 +39,35 @@
 
     </header>
   </div>
-  <div id="main-container">
-    <div id="main" class="wrapper clearfix">
+
+
       
       {% block content %}
-      {% endblock %} 
       
-    </div> <!-- #main -->
-
-  </div> <!-- #main-container -->
+      {% endblock %} 
 
   <div id="container">
-    <div class="row">
-      <div class="col-sm-3 col-sm-offset-1"> 
+
+
+
+    </div> <!-- end of row -->
+  <div id="footer-container">
+    <footer class="wrapper">
+          <div class="row" style="color:black">
+      <div class="col-sm-3 col-sm-offset-1" style="background-size:cover;background-color:white"> 
           <h2>News</h2>
           <p>Using an artificial intelligence algorithm this service offers insight on reliable new.</p>
           <p>Fake news is displayed on the right.</p>
       </div>
       
-      <div class="col-sm-3 col-sm-offset-1"> 
+      <div class="col-sm-3 col-sm-offset-1" style="background-size:cover;;background-color:white"> 
         <h2>Problem Description</h2>
           <p>The problem developed with companies publishing fake new stories in order to make profit.
           </p>
 
       </div>
       
-      <div class="col-sm-3 col-sm-offset-1"> 
+      <div class="col-sm-3 col-sm-offset-1" style="background-size:cover;background-color:white"> 
          <h2>Sources</h2>
           <p>A Guide to Spotting Fake News</p>
           <p>Test it out</p> 
@@ -72,12 +75,7 @@
           <p><a href="https://twitter.com/breakingnews?lang=en">twitter news</a></p>
           <p><a href="http://www.independent.co.uk/topic/snapchat ">snapcaht news</a></p>
       </div>
-
-
-    </div> <!-- end of row -->
-
-  <div id="footer-container">
-    <footer class="wrapper">
+      </div>
       <h3>Your Source for News Reliability Rankings</h3>
     </footer>
   </div>
@@ -85,10 +83,6 @@
   
   </div>
   
-
-</body>
-
-
 </html>
 
 <!--
