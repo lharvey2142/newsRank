@@ -39,4 +39,11 @@ def extract(request):
     article = Article(address = a.url,title = a.title,body = a.text,date = a.publish_date)
     article.save()
 
-    return render(request, 'newsApp/extract.html', {'result':a.result,'url':u, 'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
+
+
+    '''
+    classification logic insert here
+    
+    '''
+
+    return render(request, 'newsApp/extract.html', {'result':'reliable/unreliable','url':u, 'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
