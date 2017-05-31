@@ -13,16 +13,30 @@ django.setup()
 from django.contrib.auth.models import User
 users = User.objects.all()
 from newsApp.models import Article
+import newspaper
+
+def newsfeatures(a):
+    features = {}
+    features['url'] = a.address
+    features['title'] = a.title
+    features['body'] = a.text
+    features['date'] = a.publish_date
 
 def extract(request):
-    u = request.GET.get('url_to_clean')
-    print(u)
-    import newspaper
+    print(request.GET.get('url_to_clean'))
+    
 	#from newspaper import Article
-    a = newspaper.Article(u)
+    a = newspaper.Article(request.GET.get('url_to_clean'))
     a.download()
     a.parse()
     a.nlp()
+    #author = a.authors#[0] if len(a.authors) > 0 els
+    address = a.url
+    title = a.title
+    body = a.text
+    date = a.publish_date
+
     article = Article(address = a.url,title = a.title,body = a.text,date = a.publish_date)
     article.save()
-    return render(request, 'newsApp/extract.html', {'result':a.result,'url':u,title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
+
+    return render(request, 'newsApp/extract.html', {'result':a.result,'url':u, 'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})

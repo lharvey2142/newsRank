@@ -6,11 +6,12 @@ knownrealSites = [
     'http://cnn.com', 
     'https://usnews.com'
     ]
+'''
 knownFakeSites =['http://www.16WMPO.com', 'http://www.24wpn.com', 'http://www.ABCNews.com.co', 'http://www.actualidadpanam\
 ericana.com', 'http://www.AmericanPoliticNews.co', 'http://www.AmericanPresident.co', 'http://www.AMPosts.com', 'http://www\
 .ANews24.org/', 'http://www.AngryPatriotMovement.com', 'http://www.Anonjekloy.tk', 'http://www.AssociatedMediaCoverage.com'\
-, 'http://www.Aurora-News.us', 'http://www.BB4SP.com', 'http://www.BeforeItsNews.com', 'http://www.BlackInsuranceNews.com',\
- 'http://www.BostonTribune.com', 'http://www.BuzzFeedUSA.com', 'http://www.CannaSOS.com', 'http://www.Channel18News.com', '\
+,'http://www.Aurora-News.us', 'http://www.BB4SP.com', 'http://www.BeforeItsNews.com', 'http://www.BlackInsuranceNews.com',\
+'http://www.BostonTribune.com', 'http://www.BuzzFeedUSA.com', 'http://www.CannaSOS.com', 'http://www.Channel18News.com', '\
 http://www.ChristianTimesNewspaper.com', 'http://www.ChristianToday.info', 'http://www.CivicTribune.com', 'http://www.Civic\
 Tribune.com', 'http://www.ClashDaily.com', 'http://www.CNNews3.com', 'http://www.Coed.com', 'http://www.ConservativeDailyPo\
 st.com', 'http://www.ConservativeFlashNews.com', 'http://www.ConservativeSpirit.com', 'http://www.DailyInfoBox.com', 'http:\
@@ -21,12 +22,11 @@ w.EmpireNews.net', 'http://www.EmpireSports.co', 'http://www.En-Volve.com', 'htt
 .com', 'http://www.FlashNewsCorner.com', 'http://www.FreedomDaily.com', 'http://www.FreeWoodPost.com', 'http://www.FreshDai\
 lyReport.com', 'http://www.GiveMeLiberty01.com', 'http://www.GlobalPoliticsNow.com', 'http://www.GummyPost.com', 'http://ww\
 w.HealthyCareAndBeauty.com', 'http://www.HealthyWorldHouse.com', 'http://www.InterestingDailyNews.com',\
-, 'http://www.LastDeplorables.com', 'http://www.LearnProgress.org', 'http://www.LiberalPlug.com', 'http://www.LibertyAllian\
-ce.com', 'http://www.Local31News.com', 'http://www.MadWorldNews.com', 'http://www.MajorThoughts.com','http://www.Mentor2day.com',\
-'http://www.MetropolitanWorlds.com', 'http://www.NationalReport.net', 'http://www.NBC.com.co', 'http://www.NeonNett\
-le.com', 'http://www.Nephef.com', 'http://www.NewPoliticsToday.com', 'http://www.News4KTLA.com', 'http://www.NewsBreaksHere\
-.com', 'http://www.NewsBySquad.com', 'http://www.NewsDaily12.com', 'http://www.NewsExaminer.net', 'http://www.NewsLeak.co',\
- 'http://www.Newslo.com', 'http://www.NewzMagazine.com', 'http://www.NotAllowedTo.com', 'http://www.OccupyDemocrats.com', '\
+,'http://www.LastDeplorables.com', 'http://www.LearnProgress.org','http://www.LiberalPlug.com', 'http://www.LibertyAlliance.com',\
+'http://www.Local31News.com', 'http://www.MadWorldNews.com', 'http://www.MajorThoughts.com','http://www.Mentor2day.com',\
+'http://www.MetropolitanWorlds.com', 'http://www.NationalReport.net', 'http://www.NBC.com.co', 'http://www.NeonNettle.com', \
+'http://www.Nephef.com', 'http://www.NewPoliticsToday.com', 'http://www.News4KTLA.com', 'http://www.NewsBreaksHere.com', 'http://www.NewsBySquad.com', 'http://www.NewsDaily12.com', 'http://www.NewsExaminer.net', 'http://www.NewsLeak.co',\
+'http://www.Newslo.com', 'http://www.NewzMagazine.com', 'http://www.NotAllowedTo.com', 'http://www.OccupyDemocrats.com', '\
 http://www.OnePoliticalPlaza.com', 'http://www.OpenMagazines.com', 'http://www.Politicalo.com',\
 'http://www.Politicono.com', 'http://www.Politicops.com', 'http://www.Politicot.com', 'http://www.PoliticsUSANews.com', 'http://www.President45DonaldTrump.com',\
 'http://www.Prntly.com', 'http://www.RedCountry.us', 'http://www.RedRockTribune.com', 'http://www.Religionlo.com', 'http://www.ReligionMind.com', 'http://www.Rogue-Nation3.com', 'http://www.RumorJournal.com', 'http://www.SatiraTribune.com', 'http://www.Smag31.com',\
@@ -44,9 +44,9 @@ ww.USAPoliticsToday.com', 'http://www.USAPoliticsZone.com', 'http://www.USASnich
 //www.USHealthyAdvisor.com', 'http://www.USHealthyLife.com', 'http://www.USHerald.com', 'http://www.USInfoNews.com', 'http:\
 //www.USPOLN.com', 'http://www.USPostman.com', 'http://www.ViralActions.com', 'http://www.VoxTribune.com', 'http://www.Wash\
 ingtonFeed.com', 'http://www.WashingtonPost.com.co', 'http://www.WorldNewsDailyReport.com', 'http://www.WorldPoliticsNow.com']
-
+'''
 import sys
-sys.path.append('/Users/froyvalencia/Desktop/newsRank')
+sys.path.append('/Users/froyvalencia/newsRank')
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','mysite.settings')
 import django
@@ -61,7 +61,7 @@ import nltk
 import tweetParser
 from newsApp.models import Article
 
-def loadNews(knownrealSites):    
+def loadNews(knownrealSites, s):    
     articles = Article.objects.all()
     #for a in articles:
     #print(a)
@@ -71,7 +71,7 @@ def loadNews(knownrealSites):
         try:
             real_paper = newspaper.build(url)
             papers.append(real_paper)
-            print(url + ' contains ' + str(len(real_paper.articles)) + ' real articles')
+            print(url + ' contains ' + str(len(real_paper.articles)) + ' '+ s + ' articles')
         except: 
             print(url)
             print('url is bad')
@@ -102,7 +102,7 @@ def loadNews(knownrealSites):
                 title = article.title,
                 body = article.text,
                 date = article.publish_date,
-                result = 'reliable',
+                result = s,
                 #positive = x,
                 #negative = y,
                 #neutral = z,
@@ -114,4 +114,5 @@ def loadNews(knownrealSites):
                 print('**************** article failed to save with field **************')
                 continue
 if __name__ == "__main__":
-    loadNews(knownrealSites)
+    loadNews(knownrealSites,'reliable')
+    #loadNews(knownFakeSites,'unreliable')
