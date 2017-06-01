@@ -1,93 +1,96 @@
 {% extends "personal/header.html" %}
 {% block content %}
 
-    <body>
+<body>
   <div id="main-container">
     <div id="main" class="wrapper clearfix">    
 
-  <div class="container article-page">
-    <div class="table-responsive">
-      <h3>Extracted Data</h3>
-      <p>{{ url }}</p>
-      <table class="table">
-        <tbody>
-        <tr>
-            <td>Result</td>
-            <td>{{ result }}</td>
-          </tr>
-          <tr>
-          <tr>
-            <td>URL</td>
-            <td>{{ url }}</td>
-          </tr>
-          <tr>
+      <div class="container article-page">
+        <div class="table-responsive">
+          <h3>Extracted Data</h3>
+          <p>{{ url }}</p>
+          <table class="table">
+            <tbody>
+            <tr>
+                <td>Message</td>
+                <td>{{ message }}</td>
+              </tr>
+              <tr>
+                <td>Result temporary place holder</td>
+                <td>{{ result }}</td>
+              </tr>
 
-          <tr>
-            <td>Title</td>
-            <td>{{ title }}</td>
-          </tr>
-          <tr>
-            <td> Authors</td>
-            <td>{{ authors }}</td>
-          </tr>
-          authors
-          <tr>
-            <td>Text</td>
-            <td>{{ text }}</td>
-          </tr>
-          <tr>
-            <td>Published</td>
-            <td>{{ publish_date }}</td>
-          </tr>
-          <tr>
-            <td>Top Image</td>
-            <td>
-              <img src="{{ top_image }}"/>
-              <p class="text-center"><a href="{{ top_image }}">{{ top_image }}</a></p>
-            </td>
-          </tr>
-          <tr>
-            <td>Movies (Videos)</td>
-            <td>{{ videos }}</td>
-          </tr>
-          <tr>
-            <td>Keywords (NLP)</td>
-            <td>{{ keywords }}</td>
-          </tr>
-          <tr>
-            <td>Summary (NLP)</td>
-            <td>{{ summary }}</td>
-          </tr>
-          <tr>
+              <tr>
+                <td>URL</td>
+                <td>{{ url }}</td>
+              </tr>
+              <tr>
+
+              <tr>
+                <td>Title</td>
+                <td>{{ title }}</td>
+              </tr>
+
+              <tr>
+                <td> Authors</td>
+                <td>{{ authors }}</td>
+              </tr>
+      
+              <tr>
+                <td>Text</td>
+                <td>{{ text }}</td>
+              </tr>
+
+              <tr>
+                <td>Published</td>
+                <td>{{ publish_date }}</td>
+              </tr>
+
+              <tr>
+                <td>Top Image</td>
+                <td>
+                  <img src="{{ top_image }}"/>
+                  <p class="text-center"><a href="{{ top_image }}">{{ top_image }}</a></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Movies (Videos)</td>
+                <td>{{ videos }}</td>
+              </tr>
+
+              <tr>
+                <td>Keywords (NLP)</td>
+                <td>{{ keywords }}</td>
+              </tr>
+
+              <tr>
+                <td>Summary (NLP)</td>
+                <td>{{ summary }}</td>
+              </tr>
+             
+            </tbody>
+          </table>
+          <!--
+          <table>
+            <tbody>
+     			    <td>Article HTML</td>
+                <td>
+                  <pre>
+                    <code class="language-markup">
+                      {{ html }}
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+     		   </tbody>
+          </table>
+          -->
           
-        </tbody>
-      </table>
-<!--
-      <table>
-        <tbody>
- 			<td>Article HTML</td>
-            <td>
-              <pre>
-                <code class="language-markup">
-                  {{ html }}
-                </code>
-              </pre>
-            </td>
-
-          </tr>
- 		</tbody>
-      </table>
-      -->
-    </div>
-  </div>
-
-
-
-
-
-      </div> <!-- #main -->
-
+        </div>
+      </div>
+    </div> <!-- #main -->
   </div> <!-- #main-container -->
-  </body>
+</body>
 
 {% endblock %}
