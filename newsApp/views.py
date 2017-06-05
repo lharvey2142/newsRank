@@ -15,6 +15,7 @@ from newsApp.models import Article
 import newspaper
 import nltk
 
+
 def getAddress(a):
     import urllib.parse
     parsed_uri = urllib.parse.urlparse(a.address)
@@ -83,12 +84,14 @@ def extract(request):
     print(message)
     #end classification logic
     return render(request, 'newsApp/extract.html', {'message':message,'result':'reliable/unreliable','url':a.url, 'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
-import urllib.parse #import urllib
+
+
+
+
+import urllib.parse 
 from robobrowser import RoboBrowser#import mechanize
 from bs4 import BeautifulSoup
 import re
-
-
 
 def search(request):
     print(request.GET.get('q'))
