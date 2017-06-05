@@ -126,3 +126,4 @@ def search(request):
             print('loop')
             results_array.append(str(source_url[0].replace("q=","").replace("&amp","")))
     return render(request, 'newsApp/links.html', {'links': results_array,'query':link})
+
