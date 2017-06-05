@@ -79,11 +79,11 @@ def extract(request):
     test_set = feature_set[4000:]
 
     classifier = nltk.NaiveBayesClassifier.train(train_set)
-
-    message = article.address + " is probably " + classifier.classify(newsfeatures(article)) + ". (accuracy : " + str(round(nltk.classify.accuracy(classifier, test_set) * 100, 2)) + "%)"
+    result = classifier.classify(newsfeatures(article))
+    message = article.address + " is probably " + result + ". (accuracy : " + str(round(nltk.classify.accuracy(classifier, test_set) * 100, 2)) + "%)"
     print(message)
     #end classification logic
-    return render(request, 'newsApp/extract.html', {'message':message,'result':'reliable/unreliable','url':a.url, 'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
+    return render(request, 'newsApp/extract.html', {'message':message,'result':result,'url':a.url, 'title': a.title,'authors':a.authors,'text': a.text,'publish_date': a.publish_date,'keywords':a.keywords,'summary':a.summary,'videos':a.movies,'html':a.html,'top_image':a.top_image})
 
 
 
