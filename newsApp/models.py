@@ -1,6 +1,12 @@
 from django.db import models
 from django.forms import ModelForm #needed to use ModelForm
 # Create your models here.
+
+
+'''
+Article model
+stores information retrieved from web scraper
+'''
 class Article(models.Model):
     address = models.CharField(null=True,max_length = 140,default='')
     title = models.CharField(null=True,max_length = 140,default='')

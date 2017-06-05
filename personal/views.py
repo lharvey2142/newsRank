@@ -4,3 +4,6 @@ def index(request):
 
 def contact(request):
     return render(request, 'personal/basic.html',{'content':['If you would like to contact NewsRank, please email me.','Insert Email Here']})
+
+def googleSearch(request):
+    return render(request, 'personal/googleSearch.html')
