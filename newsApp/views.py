@@ -89,18 +89,16 @@ def extract(request):
 
 
 import urllib.parse 
-from robobrowser import RoboBrowser#import mechanize
+from robobrowser import RoboBrowser
 from bs4 import BeautifulSoup
 import re
 
 def search(request):
     print(request.GET.get('q'))
     link = request.GET.get('q')
-# create the browser and change the useragent
+    # create the browser and change the useragent
     br = RoboBrowser()
-    #br.set_handle_robots(False) # We don't want our browser to be seen as robotic script
-    #br.session.headers['User-Agent'] = 'chrome' #br.addheaders = [('User-agent','chrome')]
-# replace space with +, look up the word in google, and return 100 links
+    # replace space with +, look up the word in google, and return 100 links
     term = link.replace(" ","+")
     query = "https://www.google.com/search?q="+term
 
@@ -116,7 +114,8 @@ def search(request):
     soup1 = BeautifulSoup(searchtext)
     list_items = soup1.findAll('li')
 
-    regex = "q(?!.*q).*?&amp"   #splitting the text so the it would direct to the website
+    #splitting the text so the it would direct to the website
+    regex = "q(?!.*q).*?&amp"   
     pattern = re.compile(regex)
     results_array = []
     print(list_items)
@@ -128,5 +127,13 @@ def search(request):
         if len(source_url)>0:
             print('loop')
             results_array.append(str(source_url[0].replace("q=","").replace("&amp","")))
-    return render(request, 'newsApp/links.html', {'links': results_array,'query':link})
+    final = []
+    for n in results_array:
+        print(n)
+        if n.find('http') != -1: 
+            final.append(n[n.find('http'):])    
+        elif n.find('www.') != -1:
+            final.append('http://'+n[n.find('www.'):])
+
+    return render(request, 'newsApp/links.html', {'links': final,'query':link})
 

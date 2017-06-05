@@ -2,20 +2,12 @@
 {% block content %}
 	<body style="background-image:url('http://www.ivanhoecambridge.com/-/media/images/website/global/06image-ipad-media.jpg">
 
-  <!--	
-    <form method = 'GET' action = 'search'>
-    <input type ='text' name = 'q' placeholder = 'search' value ='{{ request.GET.q}}' />
-    <input type = 'submit' value = 'Search' />
-    </form>
-  -->
-
-
     <div id="main-container" style="min-height:550px;min-width:300px;margin 0 auto">
     <div id="main" class="wrapper clearfix">  
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form action="{% 'search' %}" method=get>
+            <form action="{% url 'search' %}" method=get>
             {% csrf_token %}
                 <div class="form-group">
                     <div class="col-md-12">
@@ -32,6 +24,6 @@
 
   </div>
   </div>
+  </body>
 
-    </body>
 {% endblock %}
