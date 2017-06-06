@@ -1,29 +1,29 @@
 {% extends "personal/header.html" %}
-{% block content %}
-	<body style="background-image:url('http://www.ivanhoecambridge.com/-/media/images/website/global/06image-ipad-media.jpg');background-position:center center;background-size:cover;background-repeat:no-repeat;">
 
-    <div id="main-container" style="min-height:550px;min-width:300px;margin 0 auto">
-    <div id="main" class="wrapper clearfix">  
+<!-- Search form for querying google for links matchin search query -->
+{% block content %}	
+    <body style="background-image:url('http://www.ivanhoecambridge.com/-/media/images/website/global/06image-ipad-media.jpg');background-position:center center;background-size:cover;background-repeat:no-repeat;">
 
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <form action="{% url 'search' %}" method=get>
-            {% csrf_token %}
-                <div class="form-group">
-                    <div class="col-md-12">
-                        <input class="form-control input-lg" type="text" name="q" placeholder="enter search term">
-                    </div>
-                    <div class="col-md-12">
-                        <br />
-                        <button class="btn btn-success btn-lg" style="text-align:center;">SEARCH</button>
-                    </div>
+        <div id="main-container" style="min-height:550px;min-width:300px;margin 0 auto">
+            <div id="main" class="wrapper clearfix">  
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form action="{% url 'search' %}" method=get>
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input class="form-control input-lg" type="text" name="q" placeholder="enter search term">
+                            </div>
+                            <div class="col-md-12">
+                                <br />
+                                <button class="btn btn-success btn-lg" style="text-align:center;">SEARCH</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </div>
-
-  </div>
-  </div>
+            </div>
+          </div>
+      </div>
   </body>
-
 {% endblock %}

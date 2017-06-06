@@ -1,24 +1,49 @@
-
 {% extends "personal/header.html" %}
 {% block content %}
+
 <body>
-<div id="main-container">
-<div id="main" class="wrapper clearfix">    
+  <div id="main-container">
+    <div id="main" class="wrapper clearfix">    
 
-	<h3><a href="/newsApp/{{article.id}}">{{article.title }}</a></h3>
-	<h6> was searched on {{ article.date }} and a result of </h6> 
-	<h2>{{article.result}} </h2>
-	<!-- <h6> Sentiment from twitter: positive: {{ article.positive}} negative: {{ article.negative}} neutral: {{article.neutral}} </h6> -->
+      <div class="container article-page">
+        <div class="table-responsive">
+          <h3>Article</h3>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Result:</td>
+                <td>{{ article.result }}</td>
+              </tr>
 
-	<h4>{{article.address}} </h4>
-	<div class = "container">
-	 {{ article.body|safe|linebreaks}}
+              <tr>
+                <td>Published:</td>
+                <td>{{ article.date }}</td>
+              </tr> 
+              
+              <tr>
+                <td>URL:</td>
+                <td>{{ article.address }}</td>
+              </tr>
+              <tr>
 
-	</div>
-	<br><br>
+              <tr>
+                <td>Title:</td>
+                <td>{{ article.title }}</td>
+              </tr>
+      
+              <tr>
+                <td>Text:</td>
+                <td>{{ article.body }}</td>
+              </tr>
 
-</div> <!-- #main -->
-</div> <!-- #main-container -->
+            
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+    </div> <!-- #main -->
+  </div> <!-- #main-container -->
 </body>
 
 {% endblock %}

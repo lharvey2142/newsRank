@@ -11,6 +11,9 @@ knownrealSites = [
     'https://usnews.com'
     ]
 knownFakeSites =[
+    'http://www.theonion.com',
+]
+'''
     'http://www.16WMPO.com',
     'http://www.24wpn.com',
     'http://www.ABCNews.com.co',
@@ -167,6 +170,7 @@ knownFakeSites =[
     'http://www.WorldNewsDailyReport.com',
     'http://www.WorldPoliticsNow.com',
 ]
+'''
 
 import sys
 sys.path.append('/Users/froyvalencia/newsRank')
@@ -199,7 +203,7 @@ def loadNews(knownrealSites, s):
             print(url)
             print('url is bad')
             continue
-    news_pool.set(papers, threads_per_source=3)
+    news_pool.set(papers, threads_per_source=4)
     news_pool.join()
     for paper in papers:
         for article in paper.articles:
@@ -230,6 +234,8 @@ def loadNews(knownrealSites, s):
                 #negative = y,
                 #neutral = z,
                 )
+                #article.parse()
+                #article.nlp()
             try:
                 a.save()
                 print('**************************article SAVED**************************')
@@ -237,5 +243,5 @@ def loadNews(knownrealSites, s):
                 print('**************** article failed to save with field **************')
                 continue
 if __name__ == "__main__":
-    loadNews(knownrealSites,'reliable')
-#loadNews(knownFakeSites,'unreliable')
+    #loadNews(knownrealSites,'reliable')
+    loadNews(knownFakeSites,'unreliable')

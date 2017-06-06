@@ -9,7 +9,9 @@
 # https://docs.djangoproject.com/en/1.11/topics/db/queries/ 
 # this website will give you the query format
 
-
+'''
+Code from saffy to be used in future to query database
+'''
 from django.db.models import Article
 
 query = request.GET.get("q")

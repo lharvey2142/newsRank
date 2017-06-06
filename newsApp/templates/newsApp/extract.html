@@ -1,18 +1,22 @@
 {% extends "personal/header.html" %}
+<!-- 
+Displays extracted content from the extraction process and shows result of the 
+article classification algorithm with accuracy based on the naive bayes results
+-->
 {% block content %}
 
 <body>
   <div id="main-container">
     <div id="main" class="wrapper clearfix">    
-
       <div class="container article-page">
         <div class="table-responsive">
           <h3>Extracted Data</h3>
           <table class="table">
+
             <tbody>
               <tr>
-                <td>Message:</td>
-                <td>{{ message }}</td>
+                <td>Algorithm accuracy:</td>
+                <td>{{ accuracy }}</td>
               </tr>
 
               <tr>
@@ -71,6 +75,7 @@
              
             </tbody>
           </table>
+
           <!--
           <table>
             <tbody>
