@@ -1,13 +1,33 @@
 {% extends "personal/header.html" %}
 {% block content %}
-<body>
-<div id="main-container">
-<div id="main" class="wrapper clearfix"> 
-	{% for article in object_list %}
-		<h5>{{article.date|date:"Y-m-d" }}<a href="/newsApp/{{article.id}}"> {{article.title}} </a></h5>
-	{% endfor %}
-</div>
-</div>
-</body>
 
+
+
+
+<body>
+  <div id="main-container">
+    <div id="main" class="wrapper clearfix">    
+      <div class="container article-page">
+        <div class="table-responsive">
+          <h3>News</h3>
+          <table class="table">
+          	{% for article in object_list %}
+            <tbody>
+            
+              <tr>
+                <td>{{article.date|date:"Y-m-d" }}:</td>
+                <td><a href="/newsApp/{{article.id}}"> {{article.title}} </a></h5></td>
+              </tr>
+	           
+
+              </tbody>
+              {% endfor %}
+              </table>
+			</div>
+	</div>
+</div>
+</div>
+
+</body>
 {% endblock %}
+
