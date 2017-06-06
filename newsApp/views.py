@@ -174,5 +174,8 @@ def search(request):
         elif n.find('www.') != -1:
             final.append('http://'+n[n.find('www.'):])
 
+    for link in final:
+        print(link)
+        
     return render(request, 'newsApp/links.html', {'links': final,'query':link})
 
