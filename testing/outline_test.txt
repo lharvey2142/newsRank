@@ -1,9 +1,16 @@
-
 test classify url form
+
      test that triggeres reliable 
-     test that triggers unreliable 
+http://www.foxnews.com/world/2017/06/06/london-terror-attack-british-officials-missed-warning-signs-ahead-recent-assault.html
+
+     test that triggers unreliable
+http://www.theonion.com/article/snuggle-marketers-kill-18-34-demographic-rather-le-56176
+
      test that triggeres reliable from cache 
-     test that triggeres unreliable from cache
+http://www.BeforeItsNews.com/motor-junkies/2017/06/1962-airstream-globetrotter-vintage-trailer-fireball-malibu-vlog-617-2546195.html
+
+     test that triggeres unreliable from cache 
+http://www.theonion.com/article/subconscious-cant-wait-turn-offhand-remark-boss-dr-56166
 
 test search form
      search for "donald trump" -> click on links
