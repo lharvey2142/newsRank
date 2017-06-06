@@ -1,0 +1,10 @@
+
+test classify url form
+     test that triggeres reliable 
+     test that triggers unreliable 
+     test that triggeres reliable from cache 
+     test that triggeres unreliable from cache
+
+test search form
+     search for "donald trump" -> click on links
+
