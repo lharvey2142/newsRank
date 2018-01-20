@@ -12,8 +12,6 @@ knownrealSites = [
     ]
 knownFakeSites =[
     'http://www.theonion.com',
-]
-'''
     'http://www.16WMPO.com',
     'http://www.24wpn.com',
     'http://www.ABCNews.com.co',
@@ -170,7 +168,6 @@ knownFakeSites =[
     'http://www.WorldNewsDailyReport.com',
     'http://www.WorldPoliticsNow.com',
 ]
-'''
 
 import sys
 sys.path.append('/Users/froyvalencia/newsRank')
@@ -243,5 +240,5 @@ def loadNews(knownrealSites, s):
                 print('**************** article failed to save with field **************')
                 continue
 if __name__ == "__main__":
-    #loadNews(knownrealSites,'reliable')
+    loadNews(knownrealSites,'reliable')
     loadNews(knownFakeSites,'unreliable')
