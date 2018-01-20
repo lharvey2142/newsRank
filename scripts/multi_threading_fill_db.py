@@ -1,13 +1,13 @@
 knownrealSites = [    
-    'http://www.cbsnews.com/',
+    'https://www.cbsnews.com/',
     'https://www.msnbc.com/',
     'https://www.abcnews.go.com',
     'https://www.wsj.com',
-    'http://www.foxnews.com',
+    'https://www.foxnews.com',
     'https://www.nytimes.com',
     'https://www.apnews.com',
     'https://www.ap.org/en-us',
-    'http://www.cnn.com', 
+    'https://www.cnn.com', 
     'https://www.usnews.com'
     ]
 knownFakeSites =[
