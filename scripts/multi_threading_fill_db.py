@@ -203,7 +203,7 @@ def loadNews(knownrealSites, s):
             print(url)
             print('url is bad')
             continue
-    news_pool.set(papers, threads_per_source=4)
+    news_pool.set(papers, threads_per_source=8)
     news_pool.join()
     for paper in papers:
         for article in paper.articles:
