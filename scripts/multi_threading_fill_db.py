@@ -5,10 +5,10 @@ knownrealSites = [
     'https://www.wsj.com',
     'http://www.foxnews.com',
     'https://www.nytimes.com',
-    'https://apnews.com',
-    'https://ap.org/en-us',
-    'http://cnn.com', 
-    'https://usnews.com'
+    'https://www.apnews.com',
+    'https://www.ap.org/en-us',
+    'http://www.cnn.com', 
+    'https://www.usnews.com'
     ]
 knownFakeSites =[
     'http://www.theonion.com',
